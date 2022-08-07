@@ -33,6 +33,7 @@ input {
 .container {
   text-align: center;
   font-family: "Poppins", sans-serif;
+  margin: 0 auto;
 }
 .col-2,
 .top {
@@ -71,6 +72,10 @@ input {
 .current-weather-icon {
   font-size: 200px;
   margin-top: 5px;
+}
+.footer {
+  margin-top: 10px;
+  font-size: 15px;
 }
 .forecast.material-symbols-outlined {
   font-size: 35px;
