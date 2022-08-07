@@ -1,0 +1,94 @@
+body {
+  color: rgb(85, 172, 167);
+  margin: 5% 20% auto;
+}
+form {
+  margin-bottom: 5px;
+}
+h1,
+h2,
+h4 {
+  margin-bottom: 0;
+}
+input {
+  border: 1px solid rgb(116, 153, 151);
+}
+#farenheit-change,
+#celcius-change {
+  font-size: 20px;
+  color: rgb(116, 153, 151);
+  text-decoration: none;
+}
+.bottom,
+.top {
+  background-color: rgb(236, 247, 246);
+}
+#change-city {
+  max-width: 75%;
+}
+#change-city::placeholder {
+  color: 116, 153, 151;
+}
+
+.container {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.col-2,
+.top {
+  border: 1px solid rgba(116, 153, 151, 0.5);
+}
+.col-2 {
+  border-top: none;
+}
+#current-button {
+  color: rgb(85, 172, 167);
+  font-weight: 500;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid rgb(85, 172, 167);
+}
+.current-details {
+  padding: 15% 5%;
+  line-height: 45px;
+  font-size: larger;
+}
+.current-location {
+  font-size: 45px;
+  position: relative;
+  top: 20px;
+}
+.current-main {
+  margin-top: 7px;
+  color: rgb(116, 153, 151);
+}
+.current-temp {
+  font-size: 55px;
+}
+.current-time {
+  font-size: 15px;
+}
+.current-weather-icon {
+  font-size: 200px;
+  margin-top: 5px;
+}
+.forecast.material-symbols-outlined {
+  font-size: 35px;
+}
+.forecast {
+  margin: 3px 0 auto;
+}
+#go {
+  color: rgb(85, 172, 167);
+  font-weight: 500;
+}
+.material-symbols-outlined {
+  color: rgb(116, 153, 151);
+}
+.row.current {
+  padding-top: 5px;
+}
+
+.temperature-forecast {
+  font-weight: 600;
+}
