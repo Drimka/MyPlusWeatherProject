@@ -34,6 +34,7 @@ input {
   text-align: center;
   font-family: "Poppins", sans-serif;
   margin: 0 auto;
+  max-width: 600px;
 }
 .col-2,
 .top {
@@ -55,7 +56,8 @@ input {
   font-size: larger;
 }
 .current-location {
-  font-size: 45px;
+  font-size: 40px;
+  line-height: 1;
   position: relative;
   top: 20px;
 }
@@ -64,13 +66,13 @@ input {
   color: rgb(116, 153, 151);
 }
 .current-temp {
-  font-size: 55px;
+  font-size: 50px;
 }
 .current-time {
   font-size: 15px;
 }
 .current-weather-icon {
-  font-size: 200px;
+  font-size: 170px;
   margin-top: 5px;
 }
 .footer {
