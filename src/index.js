@@ -17,7 +17,6 @@ function currentTime(p) {
   return p.toLocaleString("en-uk", {
     hour: "2-digit",
     minute: "2-digit",
-    second: "2-digit",
   });
 }
 nowDate.innerHTML = currentDate(now);

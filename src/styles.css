@@ -1,6 +1,5 @@
 body {
   color: rgb(85, 172, 167);
-  margin: 5% 20% auto;
 }
 form {
   margin-bottom: 5px;
@@ -8,7 +7,7 @@ form {
 h1,
 h2,
 h4 {
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 input {
   border: 1px solid rgb(116, 153, 151);
@@ -29,12 +28,15 @@ input {
 #change-city::placeholder {
   color: 116, 153, 151;
 }
-
+#city-form {
+  font-size: 15px;
+}
 .container {
   text-align: center;
   font-family: "Poppins", sans-serif;
   margin: 0 auto;
   max-width: 600px;
+  padding: 0;
 }
 .col-2,
 .top {
@@ -43,23 +45,25 @@ input {
 .col-2 {
   border-top: none;
 }
+
 #current-button {
   color: rgb(85, 172, 167);
   font-weight: 500;
   display: block;
-  margin: 0 auto;
+  margin: 5% auto;
   border: 1px solid rgb(85, 172, 167);
 }
 .current-details {
-  padding: 15% 5%;
+  padding: 15% 0;
   line-height: 45px;
-  font-size: larger;
+  font-size: 18px;
 }
 .current-location {
-  font-size: 40px;
+  font-size: 35px;
   line-height: 1;
+  margin-bottom: 5%;
   position: relative;
-  top: 20px;
+  top: 10px;
 }
 .current-main {
   margin-top: 7px;
@@ -89,13 +93,15 @@ input {
   color: rgb(85, 172, 167);
   font-weight: 500;
 }
+.location-mark {
+  display: inline;
+  font-size: 15px;
+  max-width: 15px;
+  padding: 0;
+}
 .material-symbols-outlined {
   color: rgb(116, 153, 151);
 }
-.row.current {
-  padding-top: 5px;
-}
-
 .temperature-forecast {
   font-weight: 600;
 }
