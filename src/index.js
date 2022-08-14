@@ -31,6 +31,13 @@ function showWeather(responce) {
   document.querySelector("#wind").innerHTML = responce.data.wind.speed;
   document.querySelector("#pressure").innerHTML = responce.data.main.pressure;
   document.querySelector("#humidity").innerHTML = responce.data.main.humidity;
+  document.querySelector("#current-description").innerHTML =
+    responce.data.weather[0].description;
+  let currentIcon = document.querySelector("#current-icon");
+  currentIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${responce.data.weather[0].icon}@2x.png`
+  );
 }
 function citySearch(city) {
   let apiKey = "6656788d9c9f0817f49bef13f8c59b1f";

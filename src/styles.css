@@ -53,10 +53,24 @@ input {
   margin: 5% auto;
   border: 1px solid rgb(85, 172, 167);
 }
+#current-description {
+  font-size: 18px;
+  margin: 7px auto;
+}
+#current-description:first-letter {
+  text-transform: capitalize;
+}
 .current-details {
   padding: 15% 0;
   line-height: 45px;
   font-size: 18px;
+}
+#current-icon {
+  background-color: rgba(116, 153, 151, 0.31);
+  display: block;
+  margin: 5px auto;
+  width: 150px;
+  border-radius: 40px;
 }
 .current-location {
   font-size: 35px;
@@ -75,10 +89,7 @@ input {
 .current-time {
   font-size: 15px;
 }
-.current-weather-icon {
-  font-size: 170px;
-  margin-top: 5px;
-}
+
 .footer {
   margin-top: 10px;
   font-size: 15px;
@@ -99,9 +110,7 @@ input {
   max-width: 15px;
   padding: 0;
 }
-.material-symbols-outlined {
-  color: rgb(116, 153, 151);
-}
+
 .temperature-forecast {
   font-weight: 600;
 }
