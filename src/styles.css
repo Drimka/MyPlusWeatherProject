@@ -12,12 +12,6 @@ h4 {
 input {
   border: 1px solid rgb(116, 153, 151);
 }
-#farenheit-change,
-#celcius-change {
-  font-size: 20px;
-  color: rgb(116, 153, 151);
-  text-decoration: none;
-}
 .bottom,
 .top {
   background-color: rgb(236, 247, 246);
@@ -27,6 +21,17 @@ input {
 }
 #change-city::placeholder {
   color: 116, 153, 151;
+}
+.change-format {
+  font-size: 20px;
+  color: rgb(116, 153, 151);
+  text-decoration: none;
+}
+.change-format .non-active {
+  color: rgba(116, 153, 151, 0.4);
+}
+.change-format:hover {
+  color: rgb(116, 153, 151);
 }
 #city-form {
   font-size: 15px;
