@@ -39,6 +39,8 @@ function showWeather(responce) {
     "src",
     `http://openweathermap.org/img/wn/${responce.data.weather[0].icon}@2x.png`
   );
+  celciusLink.classList.remove("non-active");
+  farenheitLink.classList.add("non-active");
 }
 function citySearch(city) {
   let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
