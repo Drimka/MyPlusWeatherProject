@@ -23,7 +23,13 @@ function currentTime(p) {
 nowDate.innerHTML = currentDate(now);
 nowDay.innerHTML = currentDay(now);
 nowTime.innerHTML = currentTime(now);
+function showForecast(responce) {}
 
+function getCityCoords(coords) {
+  let apiLink = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiLink);
+  axios.get(apiLink).then(showForecast);
+}
 function showWeather(responce) {
   let currentTemperature = document.querySelector(".current-temp");
   apiTemperature = responce.data.main.temp;
@@ -41,6 +47,7 @@ function showWeather(responce) {
   );
   celciusLink.classList.remove("non-active");
   farenheitLink.classList.add("non-active");
+  getCityCoords(responce.data.coord);
 }
 function citySearch(city) {
   let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
