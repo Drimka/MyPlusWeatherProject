@@ -16,6 +16,9 @@ input {
 .top {
   background-color: rgb(236, 247, 246);
 }
+.bottom {
+  border-left: 1px solid rgba(116, 153, 151, 0.5);
+}
 #change-city {
   max-width: 75%;
 }
@@ -39,7 +42,7 @@ input {
 .container {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  margin: 0 auto;
+  margin: 5px auto;
   max-width: 700px;
   padding: 0;
 }
@@ -49,6 +52,7 @@ input {
 }
 .col-2 {
   border-top: none;
+  border-left: none;
 }
 
 #current-button {
@@ -61,7 +65,6 @@ input {
 #current-description {
   font-size: 18px;
   margin: 7px auto;
-  text-decoration: underline;
 }
 #current-description:first-letter {
   text-transform: capitalize;
@@ -128,6 +131,9 @@ input {
 }
 .temperature-forecast {
   font-weight: 600;
+}
+.temperature-forecast-min {
+  opacity: 0.5;
 }
 .under-construction {
   text-align: center;
