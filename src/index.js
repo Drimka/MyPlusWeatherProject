@@ -23,11 +23,31 @@ function currentTime(p) {
 nowDate.innerHTML = currentDate(now);
 nowDay.innerHTML = currentDay(now);
 nowTime.innerHTML = currentTime(now);
-function showForecast(responce) {}
+
+function showForecast(responce) {
+  let forecastElement = document.querySelector("#forecast-block");
+  let forecastHTML = ``;
+  let forecastData = responce.data.daily;
+  forecastData.splice(6, 2);
+  console.log(forecastData);
+  forecastData.forEach(function (data) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+            <img class="forecast forecast-icon" src="http://openweathermap.org/img/wn/04d@2x.png" />
+            <p class="forecast">
+              <span id="temperature-forecast-min">10</span>...<span id="temperature-forecast-max">19</span>
+            </p>
+            <p class="forecast" id="forecast-date">June 24</p>
+            <p class="forecast" id="forecast-day-week">Friday</p>
+          </div>`;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function getCityCoords(coords) {
   let apiLink = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiLink);
   axios.get(apiLink).then(showForecast);
 }
 function showWeather(responce) {

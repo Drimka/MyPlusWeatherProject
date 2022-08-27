@@ -102,12 +102,17 @@ input {
   left: -12px;
   text-align: left;
 }
-.forecast.material-symbols-outlined {
-  font-size: 35px;
-}
+
 .forecast {
   font-size: 15px;
   margin: 3px 0 auto;
+}
+.forecast-icon {
+  background-color: rgba(116, 153, 151, 0.31);
+  border-radius: 17px;
+  display: block;
+  margin: 5px auto;
+  width: 50px;
 }
 #go {
   color: rgb(85, 172, 167);
