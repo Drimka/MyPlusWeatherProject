@@ -24,22 +24,47 @@ nowDate.innerHTML = currentDate(now);
 nowDay.innerHTML = currentDay(now);
 nowTime.innerHTML = currentTime(now);
 
+function forecastDate(timestamp) {
+  let day = new Date(timestamp * 1000);
+  return day.toLocaleDateString("en-us", {
+    month: "short",
+    day: "numeric",
+  });
+}
+function forecastDayW(timestamp) {
+  let day = new Date(timestamp * 1000);
+  return day.toLocaleDateString("en-us", {
+    weekday: "short",
+  });
+}
+
 function showForecast(responce) {
   let forecastElement = document.querySelector("#forecast-block");
   let forecastHTML = ``;
   let forecastData = responce.data.daily;
-  forecastData.splice(6, 2);
+  forecastData.pop();
+  forecastData.shift();
   console.log(forecastData);
   forecastData.forEach(function (data) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
-            <img class="forecast forecast-icon" src="http://openweathermap.org/img/wn/04d@2x.png" />
+            <img class="forecast forecast-icon" src="http://openweathermap.org/img/wn/${
+              data.weather[0].icon
+            }@2x.png" />
             <p class="forecast">
-              <span id="temperature-forecast-min">10</span>...<span id="temperature-forecast-max">19</span>
+              <span class="temperature-forecast-max">${Math.round(
+                data.temp.max
+              )}°</span>... <span class="temperature-forecast-min">${Math.round(
+        data.temp.min
+      )}°</span>
             </p>
-            <p class="forecast" id="forecast-date">June 24</p>
-            <p class="forecast" id="forecast-day-week">Friday</p>
+            <p class="forecast" class="forecast-date">${forecastDate(
+              data.dt
+            )}</p>
+            <p class="forecast" class="forecast-day-week">${forecastDayW(
+              data.dt
+            )}</p>
           </div>`;
   });
 
