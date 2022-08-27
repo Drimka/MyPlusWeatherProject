@@ -61,6 +61,7 @@ input {
 #current-description {
   font-size: 18px;
   margin: 7px auto;
+  text-decoration: underline;
 }
 #current-description:first-letter {
   text-transform: capitalize;
@@ -93,6 +94,7 @@ input {
 }
 .current-time {
   font-size: 15px;
+  text-decoration: none;
 }
 
 .footer {
@@ -126,4 +128,8 @@ input {
 }
 .temperature-forecast {
   font-weight: 600;
+}
+.under-construction {
+  text-align: center;
+  font-size: 25px;
 }

@@ -22,7 +22,7 @@ function currentTime(p) {
 }
 nowDate.innerHTML = currentDate(now);
 nowDay.innerHTML = currentDay(now);
-nowTime.innerHTML = currentTime(now);
+nowTime.innerHTML = `Last updated: ${currentTime(now)}`;
 
 function forecastDate(timestamp) {
   let day = new Date(timestamp * 1000);
@@ -44,7 +44,6 @@ function showForecast(responce) {
   let forecastData = responce.data.daily;
   forecastData.pop();
   forecastData.shift();
-  console.log(forecastData);
   forecastData.forEach(function (data) {
     forecastHTML =
       forecastHTML +
@@ -109,11 +108,16 @@ cityForm.addEventListener("submit", cityInput);
 let celciusLink = document.querySelector("#celcius-change");
 let farenheitLink = document.querySelector("#farenheit-change");
 let currentTemperature = document.querySelector(".current-temp");
+let forecastElement = document.querySelector("#forecast-block");
 function celciusChange(event) {
   event.preventDefault();
   currentTemperature.innerHTML = `${Math.round(apiTemperature)}°C`;
   farenheitLink.classList.add("non-active");
   celciusLink.classList.remove("non-active");
+  let city = document.querySelector("#current-city");
+  let cityValue = city.innerHTML;
+  forecastElement.classList.remove("under-construction");
+  citySearch(cityValue);
 }
 function farenheitChange(event) {
   event.preventDefault();
@@ -122,6 +126,8 @@ function farenheitChange(event) {
   )}°F`;
   farenheitLink.classList.remove("non-active");
   celciusLink.classList.add("non-active");
+  forecastElement.innerHTML = "🛠 Under construction 🛠";
+  forecastElement.classList.add("under-construction");
 }
 celciusLink.addEventListener("click", celciusChange);
 farenheitLink.addEventListener("click", farenheitChange);
